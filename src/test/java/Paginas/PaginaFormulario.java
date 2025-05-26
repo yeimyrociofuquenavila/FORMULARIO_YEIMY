@@ -715,8 +715,6 @@ public class PaginaFormulario {
         driver.get(urlIndice);
         Reporte.logInfo(test, "Navegando a la página de índice", driver);
     }
-    // ============== MÉTODOS PARA VALIDACIÓN DEL HEADER ==============
-// Agregar estos métodos a la clase PaginaFormulario
 
     /**
      * Verifica error ortográfico en clase CSS "contedenor-cabecera"
