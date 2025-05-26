@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.Softesting</groupId>
+    <artifactId>Formulario</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <properties>
+        <!-- Versión de Java para compilación (fuente) -->
+        <maven.compiler.source>21</maven.compiler.source>
+        <!-- Versión de Java para compilación (destino) -->
+        <maven.compiler.target>21</maven.compiler.target>
+        <!-- Versión de Cucumber para pruebas BDD -->
+        <cucumber.version>7.14.0</cucumber.version>
+        <!-- Versión de ExtentReports para informes de pruebas -->
+        <extentreports.version>5.1.1</extentreports.version>
+    </properties>
+    <!-- Sección de dependencias del proyecto -->
+    <dependencies>
+        <!-- Dependencia de Cucumber para Java (implementación de BDD) -->
+        <dependency><groupId>io.cucumber</groupId><artifactId>cucumber-java</artifactId><version>${cucumber.version}</version></dependency>
+        <!-- Dependencia de Cucumber para JUnit (integración con JUnit) -->
+        <dependency><groupId>io.cucumber</groupId><artifactId>cucumber-junit</artifactId><version>${cucumber.version}</version><scope>test</scope></dependency>
+        <!-- ExtentReports para generar informes de pruebas detallados -->
+        <dependency><groupId>com.aventstack</groupId><artifactId>extentreports</artifactId><version>${extentreports.version}</version></dependency>
+        <!-- JUnit para ejecutar pruebas unitarias -->
+        <dependency><groupId>junit</groupId><artifactId>junit</artifactId><version>4.13.2</version><scope>test</scope></dependency>
+
+        <!-- Selenium WebDriver para automatización de navegador -->
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.18.1</version>
+        </dependency>
+
+        <!-- Logback para registro de logs en la aplicación -->
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>1.4.14</version>
+        </dependency>
+
+        <!-- WebDriverManager para gestionar automáticamente los controladores de navegadores -->
+        <dependency>
+            <groupId>io.github.bonigarcia</groupId>
+            <artifactId>webdrivermanager</artifactId>
+            <version>5.6.3</version>
+        </dependency>
+
+        <!-- Commons IO para operaciones de entrada/salida de archivos -->
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.15.1</version>
+        </dependency>
+
+
+    </dependencies>
+    <!-- Configuración de construcción del proyecto -->
+    <build>
+        <!-- Plugins de Maven para la fase de construcción -->
+        <plugins>
+            <!-- Plugin Surefire para ejecutar pruebas unitarias -->
+            <plugin><groupId>org.apache.maven.plugins</groupId><artifactId>maven-surefire-plugin</artifactId><version>3.0.0-M5</version></plugin>
+        </plugins>
+    </build>
+</project>
